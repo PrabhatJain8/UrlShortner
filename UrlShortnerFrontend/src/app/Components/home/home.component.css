@@ -1,0 +1,28 @@
+
+
+.mainBox{
+    text-align: center;
+    height: 400px;
+    width: 600px;
+    margin: 10% auto;
+    background-color: grey;
+    box-shadow: 10px 10px 8px #000;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.headline
+{
+    font-weight: 800;
+    color: black;
+    padding-top: 10px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.design{
+    font-weight: 800;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+

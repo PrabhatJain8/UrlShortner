@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="mainBox">
+        <h1 class="headline">URL SHORTNER</h1>
+        <div class="urlForm">
+            <form #form="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group p-3">
+                    <label class="p-2 design">Enter Url</label>
+                    <input #long="ngModel" name="long" class="form-control" type="text" placeholder="Enter your long url" [(ngModel)]="urlShort.longUrl"
+                    pattern="[Hh][Tt][Tt][Pp][Ss]:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?"
+  required>
+                </div>
+                <div [hidden]="long.valid || !long.touched">
+                    <span class="text-danger">Valid safe URL is required</span>
+                </div>
+                <button type="submit" class="btn btn-light" [disabled]="form.invalid">
+                    Submit
+                </button>
+
+            </form>
+
+            <div  *ngIf="gotUrl && code!=''" class="form-group p-3">
+                <label class="p-2 design">New Url</label>
+                <input class="form-control" type="text" value="https://localhost:7008/Go/{{code}}">
+            </div>
+
+        </div>
+
+    </div>
+</div>
